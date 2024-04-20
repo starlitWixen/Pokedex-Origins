@@ -1,0 +1,39 @@
+{
+    "name": "Photosynthesis",
+    "description": "The Pokémon is able to photosynthesize, and gains stamina from being in the sun.",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 600,
+        "start_value": 0,
+        "max_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:feed",
+                    "food": 2,
+                    "saturation": 2
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_resource",
+                    "operation": "set",
+                    "change": 0
+                }
+            ]
+        }
+    },
+    "charge": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_resource",
+            "change": 1
+        },
+        "condition": {
+            "type": "origins:exposed_to_sun"
+        }
+    }
+}

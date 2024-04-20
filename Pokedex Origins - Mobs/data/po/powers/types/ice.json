@@ -1,0 +1,102 @@
+{
+    "name": "Ice-Type",
+    "description": "You are an Ice-type Pokémon.",
+    "type": "origins:multiple",
+    "freeze_immunity": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:revoke_power",
+            "power": "*:general/freeze",
+            "source": "*:general/freeze"
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:general/freeze"
+        }
+    },
+    "fire_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fireball"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "hotFloor"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "inFire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lava"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "onFire"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "freeze_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "freeze"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fighting"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "rock"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "steel"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fire"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Ice type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "ice"
+        },
+        "modifier": {
+            "name": "Ice type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

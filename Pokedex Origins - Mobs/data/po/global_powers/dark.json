@@ -1,0 +1,16 @@
+{
+    "entity_types": [
+        "minecraft:bat",
+        "minecraft:evoker",
+        "minecraft:pillager",
+        "minecraft:ravager",
+        "minecraft:vex",
+        "minecraft:vindicator",
+        "minecraft:warden",
+        "minecraft:wither_skeleton",
+        "minecraft:wither"
+    ],
+    "powers": [
+        "po:types/dark"
+    ]
+}

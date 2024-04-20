@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:zombified_piglin"
+    ],
+    "powers": [
+        "po:mobs/zombified_piglin"
+    ]
+}

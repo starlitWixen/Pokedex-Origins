@@ -1,0 +1,21 @@
+{
+	"name": "Sprigatito",
+	"description": "Its fluffy fur is similar in composition to plants. This Pokémon frequently washes its face to keep it from drying out.",
+	"powers": [
+		"po:types/grass",
+		"po:general/claws",
+		"po:general/cat-like_reflexes",
+		"po:general/pollinate",
+		"po:general/photosynthesis",
+		"po:specific/0906_sprigatito/vines",
+		"po:specific/0906_sprigatito/leafage",
+		"po:diet/herbivore",
+		"po:general/eviolite",
+		"po:evolution/0906_sprigatito"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 906,
+	"impact": 0
+}

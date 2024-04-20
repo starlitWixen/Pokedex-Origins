@@ -1,0 +1,99 @@
+{
+    "name": "Rock-Type",
+    "description": "You are a Rock-type Pokémon.",
+    "type": "origins:multiple",
+    "fire_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fireball"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "hotFloor"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "inFire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lava"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "onFire"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fighting"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "ground"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "steel"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "water"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "grass"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Rock type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "normal"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "flying"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "poison"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fire"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Rock type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+	"name": "Meowscarada",
+	"description": "With Protean active, the Pokémon is Bug-type.",
+	"powers": [
+		"po:types/bug",
+		"po:specific/0906_sprigatito/flower_trick_bug",
+		"po:specific/0906_sprigatito/u-turn"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 3,
+	"impact": 0
+}

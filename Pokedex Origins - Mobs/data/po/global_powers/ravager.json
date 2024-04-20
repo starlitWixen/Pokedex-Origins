@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:ravager"
+    ],
+    "powers": [
+        "po:mobs/ravager"
+    ]
+}

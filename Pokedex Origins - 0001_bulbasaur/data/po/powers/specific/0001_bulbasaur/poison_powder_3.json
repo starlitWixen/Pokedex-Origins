@@ -1,0 +1,300 @@
+{
+    "name": "Poison Powder",
+    "description": "The user scatters a cloud of poisonous dust that poisons the target.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:keybind",
+            "sprite": "origins:textures/gui/badge/active.png",
+            "text": "Active ability. Use %s for long-range, sneak and right-click an entity with an empty hand for short-range."
+        },
+        {
+            "type": "origins:keybind",
+            "sprite": "origins:textures/gui/badge/toggle.png",
+            "text": "Toggle between Poison Powder and Solar Beam using your \"Load Hotbar Activator\" key."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Poison Powder and Solar Beam operate on an alternating toggle; when Poison Powder is active and able to be used, Solar Beam is dormant, and vice versa. Pay attention to what icon appears on your HUD to know which attack you have prepared."
+        }
+    ],
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+            "bar_index": 20,
+            "condition": {
+                "type": "origins:power_active",
+                "power": "*:*_toggle",
+                "inverted": true
+            }
+        },
+        "min_action": {
+            "type": "origins:revoke_power",
+            "power": "*:specific/0001_bulbasaur/poison_powder_timer",
+            "source": "*:*"
+        }
+    },
+    "charge": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_resource",
+            "change": 1
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:specific/0001_bulbasaur/poison_powder_timer",
+            "inverted": true
+        }
+    },
+    "short": {
+        "type": "origins:action_on_entity_use",
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:apply_effect",
+                                "effect": {
+                                    "effect": "minecraft:poison",
+                                    "duration": 100
+                                }
+                            },
+                            {
+                                "type": "origins:grant_power",
+                                "power": "*:specific/0001_bulbasaur/poison_powder_timer",
+                                "source": "*:*"
+                            }
+                        ]
+                    }
+                },
+                {
+					"type": "origins:actor_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:raycast",
+								"shape_type": "visual",
+								"fluid_handling": "none",
+								"distance": 15,
+								"command_step": 0.25,
+								"command_along_ray": "function po:poison"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:item.bone_meal.use",
+								"volume": 1
+							},
+                            {
+                                "type": "origins:grant_power",
+                                "power": "*:specific/0001_bulbasaur/poison_powder_timer",
+                                "source": "*:*"
+                            }
+						]
+					}
+				}
+            ]
+        },
+        "item_condition": {
+            "type": "origins:empty"
+        },
+        "hands": [
+            "main_hand"
+        ],
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "comparison": "==",
+                    "compare_to": 100
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle",
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "long": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.secondary_active"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:raycast",
+                        "shape_type": "collider",
+                        "fluid_handling": "any",
+                        "bientity_action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:area_of_effect",
+                                        "radius": 2.1,
+                                        "shape": "cube",
+                                        "bientity_action": {
+                                            "type": "origins:target_action",
+                                            "action": {
+                                                "type": "origins:and",
+                                                "actions": [
+                                                    {
+                                                        "type": "origins:apply_effect",
+                                                        "effect": {
+                                                            "effect": "minecraft:poison",
+                                                            "duration": 100
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "origins:grant_power",
+                                                        "power": "*:specific/0001_bulbasaur/poison_powder_timer",
+                                                        "source": "*:*"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "include_actor": true
+                                    }
+                                },
+                                {
+                                    "type": "origins:actor_action",
+                                    "action": {
+                                        "type": "origins:grant_power",
+                                        "power": "*:specific/0001_bulbasaur/poison_powder_timer",
+                                        "source": "*:*"
+                                    }
+                                }
+                            ]
+                        },
+                        "distance": 15,
+                        "miss_action": {
+                            "type": "origins:change_resource",
+                            "resource": "*:*_resource",
+                            "operation": "set",
+                            "change": 0
+                        },
+                        "command_step": 0.25,
+                        "command_along_ray": "function po:poison"
+                    },
+                    "ticks": 1
+                },
+				{
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:item.bone_meal.use",
+                    "volume": 1
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "comparison": "==",
+                    "compare_to": 100
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle",
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "long_armor_stand": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.secondary_active"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 15,
+                    "block": true,
+                    "entity": true,
+                    "shape_type": "collider",
+                    "fluid_handling": "any",
+                    "command_at_hit": "summon minecraft:armor_stand ~ ~ ~ {Invisible:1b, NoAI:1b, Tags:[\"tokill\"]}"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "comparison": "==",
+                    "compare_to": 100
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle",
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "long_armor_stand_obliterator": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.secondary_active"
+        },
+        "entity_action": {
+            "type": "origins:delay",
+            "ticks": 2,
+            "action": {
+                "type": "origins:execute_command",
+                "command": "kill @e[type=minecraft:armor_stand,tag=tokill]"
+            }
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "comparison": "==",
+                    "compare_to": 100
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle",
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "toggle": {
+        "type": "origins:toggle",
+        "key": {
+            "key": "key.loadToolbarActivator"
+        }
+    }
+}

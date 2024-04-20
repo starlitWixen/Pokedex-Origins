@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:vex"
+    ],
+    "powers": [
+        "po:mobs/vex"
+    ]
+}

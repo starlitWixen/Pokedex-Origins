@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:slime"
+    ],
+    "powers": [
+        "po:mobs/slime"
+    ]
+}

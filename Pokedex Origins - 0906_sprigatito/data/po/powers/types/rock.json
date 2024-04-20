@@ -1,0 +1,116 @@
+{
+    "name": "Rock-Type",
+    "description": "You are a Rock-type Pokémon.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Your Rock-type attacks deal 2x damage to Flying, Bug, Fire, and Ice-type Pokémon, and 1/2x damage to Fighting, Ground, and Steel-type Pokémon."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from Fighting, Ground, Steel, Water, and Grass-type attacks, and 1/2x damage from Normal, Flying, Poison, and Fire-type attacks."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 1/2x damage from fire, fireballs, lava, and magma."
+        }
+    ],
+    "fire_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fireball"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "hotFloor"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "inFire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lava"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "onFire"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fighting"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "ground"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "steel"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "water"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "grass"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Rock type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "normal"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "flying"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "poison"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fire"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Rock type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

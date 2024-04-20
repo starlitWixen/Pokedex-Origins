@@ -1,0 +1,9 @@
+{
+    "name": "Cat-Like Reflexes",
+    "description": "The Pokémon doesn't take damage from falling.",
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:in_tag",
+        "tag": "minecraft:is_fall"
+    }
+}

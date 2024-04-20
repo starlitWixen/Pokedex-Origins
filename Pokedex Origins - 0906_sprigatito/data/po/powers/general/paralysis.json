@@ -1,0 +1,63 @@
+{
+    "name": "Paralysis",
+    "hidden": true,
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "hud_render": {
+            "should_render": true,
+            "bar_index": 2
+        },
+        "start_value": 100,
+        "min_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:clear_effect",
+                    "effect": "minecraft:slowness"
+                },
+                {
+                    "type": "origins:clear_effect",
+                    "effect": "minecraft:mining_fatigue"
+                },
+                {
+                    "type": "origins:revoke_power",
+                    "power": "*:*",
+                    "source": "*:*"
+                }
+            ]
+        }
+    },
+    "countdown": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_resource",
+            "change": -1
+        }
+    },
+    "paralysis": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "minecraft:slowness",
+                    "amplifier": 1,
+                    "duration": 40,
+                    "show_icon": false
+                },
+                {
+                    "effect": "minecraft:mining_fatigue",
+                    "amplifier": 2,
+                    "duration": 40,
+                    "show_icon": false
+                }
+            ]
+        }
+    }
+}

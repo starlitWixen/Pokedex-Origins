@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:dolphin"
+    ],
+    "powers": [
+        "po:mobs/dolphin"
+    ]
+}

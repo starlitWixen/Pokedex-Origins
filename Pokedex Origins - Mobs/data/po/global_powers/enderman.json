@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:enderman"
+    ],
+    "powers": [
+        "po:mobs/enderman"
+    ]
+}

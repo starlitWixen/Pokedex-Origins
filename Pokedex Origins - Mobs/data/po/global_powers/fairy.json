@@ -1,0 +1,10 @@
+{
+    "entity_types": [
+        "minecraft:allay",
+        "minecraft:glow_squid",
+        "minecraft:vex"
+    ],
+    "powers": [
+        "po:types/fairy"
+    ]
+}

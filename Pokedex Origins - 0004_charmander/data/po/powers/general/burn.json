@@ -1,0 +1,35 @@
+{
+    "name": "Burn",
+    "hidden": true,
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 100,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 15
+        },
+        "start_value": 100,
+        "min_action": {
+            "type": "origins:revoke_power",
+            "power": "*:*",
+            "source": "*:*"
+        }
+    },
+    "countdown": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_resource",
+            "change": -1
+        }
+    },
+    "burn": {
+        "type": "origins:burn",
+        "interval": 20,
+        "burn_duration": 1
+    }
+}

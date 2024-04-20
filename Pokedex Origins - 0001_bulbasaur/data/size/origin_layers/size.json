@@ -1,0 +1,54 @@
+{
+    "name": "Size",
+    "gui_title": {
+        "choose_origin": "Choose a size.",
+        "view_origin": "This is your size."
+    },
+    "order": 9,
+    "origins": [
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0001_bulbasaur",
+                "layer": "po:pokemon"
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0002_ivysaur",
+                "layer": "po:pokemon"
+            },
+            "origins": [
+                "size:1.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0003_venusaur",
+                "layer": "po:pokemon"
+            },
+            "origins": [
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "mega:0003_venusaur",
+                "layer": "po:pokemon"
+            },
+            "origins": [
+                "size:2.0",
+                "size:2.5"
+            ]
+        }
+    ],
+    "allow_random": false
+}

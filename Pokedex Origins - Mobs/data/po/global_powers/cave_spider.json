@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:cave_spider"
+    ],
+    "powers": [
+        "po:mobs/cave_spider"
+    ]
+}

@@ -1,0 +1,20 @@
+{
+	"name": "Squirtle",
+	"description": "It hides in its shell to protect itself, then strikes back with spouts of water at every opportunity.",
+	"powers": [
+		"po:types/water",
+		"po:general/water_breathing",
+		"po:general/swimming",
+		"po:general/rain_dish",
+		"po:specific/0007_squirtle/water_gun",
+		"po:diet/omnivore",
+		"po:mega/process_blastoisinite",
+		"po:general/eviolite",
+		"po:evolution/0007_squirtle"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 3,
+	"impact": 0
+}

@@ -1,0 +1,11 @@
+{
+    "entity_types": [
+        "minecraft:mooshroom",
+        "minecraft:pufferfish",
+        "minecraft:cave_spider",
+        "minecraft:witch"
+    ],
+    "powers": [
+        "po:types/poison"
+    ]
+}

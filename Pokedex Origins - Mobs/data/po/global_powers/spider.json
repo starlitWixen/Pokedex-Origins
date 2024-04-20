@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:spider"
+    ],
+    "powers": [
+        "po:mobs/spider"
+    ]
+}

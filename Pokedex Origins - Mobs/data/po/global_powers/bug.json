@@ -1,0 +1,12 @@
+{
+    "entity_types": [
+        "minecraft:bee",
+        "minecraft:cave_spider",
+        "minecraft:spider",
+        "minecraft:endermite",
+        "minecraft:silverfish"
+    ],
+    "powers": [
+        "po:types/bug"
+    ]
+}

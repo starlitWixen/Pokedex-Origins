@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:goat"
+    ],
+    "powers": [
+        "po:mobs/goat"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+	"name": "Meowscarada",
+	"description": "With Protean inactive, the Pokémon is Grass and Dark-type.",
+	"powers": [
+		"po:types/grass",
+		"po:types/dark",
+		"po:specific/0906_sprigatito/flower_trick",
+		"po:specific/0906_sprigatito/knock_off"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 0,
+	"impact": 0
+}

@@ -1,0 +1,13 @@
+{
+    "entity_types": [
+        "minecraft:strider",
+        "minecraft:zombified_piglin",
+        "minecraft:blaze",
+        "minecraft:ghast",
+        "minecraft:magma_cube",
+        "minecraft:zoglin"
+    ],
+    "powers": [
+        "po:types/fire"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:warden"
+    ],
+    "powers": [
+        "po:mobs/warden"
+    ]
+}

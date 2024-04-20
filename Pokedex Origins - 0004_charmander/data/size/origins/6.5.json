@@ -1,0 +1,12 @@
+{
+	"name": "6.5 Blocks",
+	"description": "You are 6.5 blocks tall.",
+	"powers": [
+		"size:6.5"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 0,
+	"impact": 0
+}

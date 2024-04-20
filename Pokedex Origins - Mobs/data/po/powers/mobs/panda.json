@@ -1,0 +1,71 @@
+{
+    "name": "Panda",
+    "hidden": true,
+    "type": "origins:modify_damage_dealt",
+    "bientity_action": {
+        "type": "origins:if_else_list",
+        "actions": [
+            {
+                "condition": {
+                    "type": "origins:actor_condition",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "difficulty",
+                        "comparison": "==",
+                        "compare_to": 1
+                    }
+                },
+                "action": {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:damage",
+                        "amount": 4,
+                        "damage_type": "minecraft:normal"
+                    }
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:actor_condition",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "difficulty",
+                        "comparison": "==",
+                        "compare_to": 2
+                    }
+                },
+                "action": {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:damage",
+                        "amount": 6,
+                        "damage_type": "minecraft:normal"
+                    }
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:actor_condition",
+                    "condition": {
+                        "type": "origins:command",
+                        "command": "difficulty",
+                        "comparison": "==",
+                        "compare_to": 3
+                    }
+                },
+                "action": {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:damage",
+                        "amount": 9,
+                        "damage_type": "minecraft:normal"
+                    }
+                }
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -1
+    }
+}

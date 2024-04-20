@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:stray"
+    ],
+    "powers": [
+        "po:mobs/stray"
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "name": "Normal-Type",
+    "description": "You are a Normal-type Pokémon.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Your Normal-type attacks deal 1/2x damage to Rock and Steel-type Pokémon, and no damage to Ghost-type Pokémon."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from Fighting-type attacks, and no damage from Ghost-type attacks."
+        }
+    ],
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "fighting"
+        },
+        "modifier": {
+            "name": "Normal type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "zero": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "ghost"
+        }
+    }
+}

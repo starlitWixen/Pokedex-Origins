@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:bee"
+    ],
+    "powers": [
+        "po:mobs/bee"
+    ]
+}

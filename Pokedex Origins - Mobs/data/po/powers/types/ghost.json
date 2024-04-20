@@ -1,0 +1,78 @@
+{
+    "name": "Ghost-Type",
+    "description": "You are a Ghost-type Pokémon.",
+    "type": "origins:multiple",
+    "undead": {
+        "type": "origins:entity_group",
+        "group": "undead"
+    },
+    "wither_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "wither"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "ghost"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "dark"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Ghost type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "poison"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "bug"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Ghost type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "zero": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "normal"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fighting"
+                }
+            ]
+        }
+    }
+}

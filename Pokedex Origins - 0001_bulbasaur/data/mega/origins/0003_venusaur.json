@@ -1,0 +1,24 @@
+{
+	"name": "Mega Venusaur",
+	"description": "In order to support its flower, which has grown larger due to Mega Evolution, its back and legs have become stronger.",
+	"powers": [
+		"po:types/grass",
+		"po:types/poison",
+		"po:general/attack_boost_1",
+		"po:general/defense_boost_2",
+		"po:general/thick_fat",
+		"po:general/pollinate",
+		"po:general/photosynthesis",
+		"po:specific/0001_bulbasaur/vines",
+		"po:specific/0001_bulbasaur/solar_beam_mega",
+		"po:specific/0001_bulbasaur/sludge_bomb",
+		"po:diet/herbivore",
+		"po:mega/0003_venusaur"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 1,
+	"impact": 0,
+	"unchoosable": true
+}

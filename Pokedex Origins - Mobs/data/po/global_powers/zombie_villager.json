@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:zombie_villager"
+    ],
+    "powers": [
+        "po:mobs/zombie_villager"
+    ]
+}

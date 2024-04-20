@@ -1,0 +1,14 @@
+{
+    "name": "Pokémon",
+    "gui_title": {
+        "choose_origin": "Choose a Pokémon.",
+        "view_origin": "This is what Pokémon you are."
+    },
+    "order": 1,
+    "origins": [
+        "paldea:0906_sprigatito",
+        "paldea:0907_floragato",
+        "paldea:0908_meowscarada"
+    ],
+    "allow_random": true
+}

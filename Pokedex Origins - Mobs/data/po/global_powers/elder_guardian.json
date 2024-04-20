@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:elder_guardian"
+    ],
+    "powers": [
+        "po:mobs/elder_guardian"
+    ]
+}

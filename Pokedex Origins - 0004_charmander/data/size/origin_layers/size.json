@@ -1,0 +1,58 @@
+{
+    "name": "Size",
+    "gui_title": {
+        "choose_origin": "Choose a size.",
+        "view_origin": "This is your size."
+    },
+    "order": 9,
+    "origins": [
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0004_charmander",
+                "layer": "po:pokemon"
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0005_charmeleon",
+                "layer": "po:pokemon"
+            },
+            "origins": [
+                "size:1.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "kanto:0006_charizard",
+                        "layer": "po:pokemon"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "mega:0006_charizard_x",
+                        "layer": "po:pokemon"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "mega:0006_charizard_y",
+                        "layer": "po:pokemon"
+                    }
+                ]
+            },
+            "origins": [
+                "size:2.0"
+            ]
+        }
+    ],
+    "allow_random": false
+}

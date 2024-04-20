@@ -1,0 +1,63 @@
+{
+    "name": "Poison-Type",
+    "description": "You are a Poison-type Pokémon.",
+    "type": "origins:multiple",
+    "poison_immunity": {
+        "type": "origins:effect_immunity",
+        "effect": "minecraft:poison"
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "ground"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "psychic"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Poison type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fighting"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "poison"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "bug"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "grass"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fairy"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Poison type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

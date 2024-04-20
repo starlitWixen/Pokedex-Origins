@@ -1,0 +1,28 @@
+{
+	"name": "Mega Charizard Y",
+	"description": "Its bond with its Trainer is the source of its power. It boasts speed and maneuverability greater than that of a jet fighter.",
+	"powers": [
+		"po:types/fire",
+		"po:types/flying",
+		"po:general/attack_boost_2",
+		"po:general/defense_boost_1",
+		"po:general/speed_boost_1",
+		"po:general/flight",
+		"po:general/ignite",
+		"po:general/claws",
+		"po:general/solar_power",
+		"po:specific/0004_charmander/firelight",
+		"po:specific/0004_charmander/fire_blast_y",
+		"po:specific/0004_charmander/air_slash_y",
+		"po:general/water_vulnerability",
+		"po:specific/0004_charmander/wings",
+		"po:diet/carnivore",
+		"po:mega/0006_charizard"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 2,
+	"impact": 0,
+	"unchoosable": true
+}

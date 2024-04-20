@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:wolf"
+    ],
+    "powers": [
+        "po:mobs/wolf"
+    ]
+}

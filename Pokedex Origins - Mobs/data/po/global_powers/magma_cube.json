@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:magma_cube"
+    ],
+    "powers": [
+        "po:mobs/magma_cube"
+    ]
+}

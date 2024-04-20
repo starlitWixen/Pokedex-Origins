@@ -1,0 +1,14 @@
+{
+	"name": "Meowscarada",
+	"description": "With Protean active, the Pokémon is Fairy-type.",
+	"powers": [
+		"po:types/fairy",
+		"po:specific/0906_sprigatito/flower_trick_fairy",
+		"po:specific/0906_sprigatito/play_rough"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 4,
+	"impact": 0
+}

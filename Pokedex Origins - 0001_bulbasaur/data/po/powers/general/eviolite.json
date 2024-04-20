@@ -1,0 +1,35 @@
+{
+    "name": "Eviolite",
+    "hidden": true,
+    "type": "origins:conditioned_attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.armor",
+        "operation": "addition",
+        "value": 10
+    },
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "pokedex_items:eviolite"
+                    }
+                }
+            },
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "offhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "pokedex_items:eviolite"
+                    }
+                }
+            }
+        ]
+    }
+}

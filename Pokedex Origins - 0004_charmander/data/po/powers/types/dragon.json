@@ -1,0 +1,130 @@
+{
+    "name": "Dragon-Type",
+    "description": "You are a Dragon-type Pokémon.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Your Dragon-type attacks deal 2x damage to Dragon-type Pokémon, 1/2x damage to Steel-type Pokémon, and no damage to Fairy-type Pokémon."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from Ice, Dragon, and Fairy-type attacks, and 1/2x damage from Fire, Water, Grass, and Electric-type attacks."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from freezing, 1/2x damage from fire, fireballs, lava, and magma, and 1/2x damage from lightning."
+        }
+    ],
+    "freeze_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "freeze"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "fire_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fireball"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "hotFloor"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "inFire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lava"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "onFire"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "lighting_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "lightningBolt"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "ice"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "dragon"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fairy"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Dragon type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "water"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "grass"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "electric"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Dragon type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

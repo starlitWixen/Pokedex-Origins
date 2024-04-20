@@ -1,0 +1,104 @@
+{
+    "name": "Ground-Type",
+    "description": "You are a Ground-type Pokémon.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Your Ground-type attacks deal 2x damage to Poison, Rock, Steel, Fire, and Electric-type Pokémon, 1/2x damage to Bug and Grass-type Pokémon, and no damage to Flying-type Pokémon."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from Water, Grass, and Ice-type attacks, 1/2x damage from Poison and Rock-type attacks, and no damage from Electric-type attacks."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from freezing, and no damage from Lightning."
+        }
+    ],
+    "freeze_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "freeze"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "paralysis_immunity": {
+        "type": "origins:effect_immunity",
+        "effect": "minecraft:slowness"
+    },
+    "lightning_immunity": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "lightningBolt"
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "water"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "grass"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "ice"
+                },
+                {
+                    "type": "origins:attacker",
+                    "entity_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "powers:water"
+                    }
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Ground type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "poison"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "rock"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Ground type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "zero": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "electric"
+        }
+    }
+}

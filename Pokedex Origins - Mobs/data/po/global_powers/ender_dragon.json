@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:ender_dragon"
+    ],
+    "powers": [
+        "po:mobs/ender_dragon"
+    ]
+}

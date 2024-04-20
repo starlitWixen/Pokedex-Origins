@@ -1,0 +1,13 @@
+{
+	"name": "Meowscarada",
+	"description": "With Protean active, the Pokémon is Grass-type.",
+	"powers": [
+		"po:types/grass",
+		"po:specific/0906_sprigatito/flower_trick_grass"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 1,
+	"impact": 0
+}

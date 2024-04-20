@@ -1,0 +1,23 @@
+{
+	"name": "Blastoise",
+	"description": "The cannon on its back is as powerful as a tank gun. Its tough legs and back enable it to withstand the recoil from firing the cannon.",
+	"powers": [
+		"po:types/water",
+		"po:general/attack_boost_2",
+		"po:general/defense_boost_1",
+		"po:general/water_breathing",
+		"po:general/swimming",
+		"po:general/mega_launcher",
+		"po:general/rain_dish",
+		"po:specific/0007_squirtle/hydro_pump_mega",
+		"po:specific/0007_squirtle/aura_sphere",
+		"po:diet/omnivore",
+		"po:mega/0009_blastoise"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 3,
+	"impact": 0,
+	"unchoosable": true
+}

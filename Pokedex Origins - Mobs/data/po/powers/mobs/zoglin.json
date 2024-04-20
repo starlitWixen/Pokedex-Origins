@@ -1,0 +1,457 @@
+{
+    "name": "Hoglin",
+    "hidden": true,
+    "type": "origins:modify_damage_dealt",
+    "bientity_action": {
+        "type": "origins:if_else_list",
+        "actions": [
+            {
+                "condition": {
+                    "type": "origins:actor_condition",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:command",
+                                "command": "difficulty",
+                                "comparison": "==",
+                                "compare_to": 1
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "data get @s Age",
+                                "comparison": ">=",
+                                "compare_to": 0
+                            }
+                        ]
+                    }
+                },
+                "action": {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 3,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 4,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 5,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:actor_condition",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:command",
+                                "command": "difficulty",
+                                "comparison": "==",
+                                "compare_to": 2
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "data get @s Age",
+                                "comparison": ">=",
+                                "compare_to": 0
+                            }
+                        ]
+                    }
+                },
+                "action": {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 3,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 4,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 5,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 6,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 7,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 8,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:actor_condition",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:command",
+                                "command": "difficulty",
+                                "comparison": "==",
+                                "compare_to": 3
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "data get @s Age",
+                                "comparison": ">=",
+                                "compare_to": 0
+                            }
+                        ]
+                    }
+                },
+                "action": {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 4.5,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 5,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 5.5,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 6,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 6.5,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 7,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 7.5,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 8,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 8.5,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 9,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 9.5,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 10,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 10.5,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 11,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 11.5,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 12,
+                                    "damage_type": "minecraft:ghost"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:actor_condition",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:command",
+                                "command": "difficulty",
+                                "comparison": "==",
+                                "compare_to": 1
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "data get @s Age",
+                                "comparison": "<",
+                                "compare_to": 0
+                            }
+                        ]
+                    }
+                },
+                "action": {
+                    "type": "origins:damage",
+                    "amount": 0.25,
+                    "damage_type": "minecraft:ghost"
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:actor_condition",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:command",
+                                "command": "difficulty",
+                                "comparison": "==",
+                                "compare_to": 2
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "data get @s Age",
+                                "comparison": "<",
+                                "compare_to": 0
+                            }
+                        ]
+                    }
+                },
+                "action": {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:damage",
+                        "amount": 0.5,
+                        "damage_type": "minecraft:ghost"
+                    }
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:actor_condition",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:command",
+                                "command": "difficulty",
+                                "comparison": "==",
+                                "compare_to": 3
+                            },
+                            {
+                                "type": "origins:command",
+                                "command": "data get @s Age",
+                                "comparison": "<",
+                                "compare_to": 0
+                            }
+                        ]
+                    }
+                },
+                "action": {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:damage",
+                        "amount": 0.75,
+                        "damage_type": "minecraft:ghost"
+                    }
+                }
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -1
+    }
+}

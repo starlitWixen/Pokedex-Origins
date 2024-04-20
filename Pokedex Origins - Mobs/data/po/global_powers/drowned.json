@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:drowned"
+    ],
+    "powers": [
+        "po:mobs/drowned"
+    ]
+}

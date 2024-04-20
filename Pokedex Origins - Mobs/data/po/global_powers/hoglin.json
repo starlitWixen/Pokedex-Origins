@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:hoglin"
+    ],
+    "powers": [
+        "po:mobs/hoglin"
+    ]
+}

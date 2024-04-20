@@ -1,0 +1,24 @@
+{
+	"name": "Ivysaur",
+	"description": "When the bud on its back starts swelling, a sweet aroma wafts to indicate the flower's coming bloom.",
+	"powers": [
+		"po:types/grass",
+		"po:types/poison",
+		"po:general/pollinate",
+		"po:general/photosynthesis",
+		"po:specific/0001_bulbasaur/vines",
+		"po:specific/0001_bulbasaur/razor_leaf",
+		"po:specific/0001_bulbasaur/poison_powder_2",
+		"po:diet/herbivore",
+		"po:mega/process_venusaurite",
+		"po:general/eviolite",
+		"po:evolution/0002_ivysaur"
+		
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 1,
+	"impact": 0,
+	"unchoosable": true
+}

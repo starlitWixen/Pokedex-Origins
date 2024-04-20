@@ -1,0 +1,86 @@
+{
+    "name": "Fairy-Type",
+    "description": "You are a Fairy-type Pokémon.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Your Fairy-type attacks deal 2x damage to Fighting, Dragon, and Dark-type Pokémon, and 1/2x damage to Poison, Steel, and Fire-type Pokémon."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from Poison and Steel-type attacks, 1/2x damage from Fighting, Bug, and Dark-type attacks, and no damage from Dragon-type attacks."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 1/2x damage from the Wither effect."
+        }
+    ],
+    "wither_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "wither"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "poison"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "steel"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Fairy type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fighting"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "bug"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "dark"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Fairy type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "zero": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "dragon"
+        }
+    }
+}

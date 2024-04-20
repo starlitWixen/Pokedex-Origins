@@ -1,0 +1,514 @@
+{
+    "name": "Size",
+    "gui_title": {
+        "choose_origin": "Choose a size.",
+        "view_origin": "This is your size."
+    },
+    "order": 9,
+    "origins": [
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0001_bulbasaur",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0002_ivysaur",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0003_venusaur",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "mega:0003_venusaur",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:2.0",
+                "size:2.5"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0004_charmander",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0005_charmeleon",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "kanto:0006_charizard",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "mega:0006_charizard_x",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "mega:0006_charizard_y",
+                        "layer": "origins:origin"
+                    }
+                ]
+            },
+            "origins": [
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0007_squirtle",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0008_wartortle",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "kanto:0009_blastoise",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "mega:0009_blastoise",
+                        "layer": "origins:origin"
+                    }
+                ]
+            },
+            "origins": [
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "johto:0173_cleffa",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:0.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0035_clefairy",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0036_clefable",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0133_eevee",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:0.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "kanto:0134_vaporeon",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "kanto:0135_jolteon",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "kanto:0136_flareon",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "johto:0196_espeon",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "johto:0197_umbreon",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "sinnoh:0470_leafeon",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "sinnoh:0471_glaceon",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "kalos:0700_sylveon",
+                        "layer": "origins:origin"
+                    }
+                ]
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "sinnoh:0446_munchlax",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0143_snorlax",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:2.0",
+                "size:3.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "kanto:0150_mewtwo",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "mega:0150_mewtwo_x",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:2.0",
+                "size:2.5"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "mega:0150_mewtwo_y",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "johto:0155_cyndaquil",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:0.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "johto:0156_quilava",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "johto:0157_typhlosion",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "hisui:0157_typhlosion",
+                        "layer": "origins:origin"
+                    }
+                ]
+            },
+            "origins": [
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "hoenn:0263_zigzagoon",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "hoenn:0264_linoone",
+                        "layer": "origins:origin"
+                    }
+                ]
+            },
+            "origins": [
+                "size:0.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "hoenn:0359_absol",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "mega:0359_absol",
+                        "layer": "origins:origin"
+                    }
+                ]
+            },
+            "origins": [
+                "size:1.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "sinnoh:0393_piplup",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:0.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "sinnoh:0394_prinplup",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "sinnoh:0395_empoleon",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "sinnoh:0403_shinx",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:0.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "sinnoh:0404_luxio",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "sinnoh:0405_luxray",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "sinnoh:0447_riolu",
+                "layer": "origins:origin"
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "sinnoh:0448_lucario",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "mega:0448_lucario",
+                        "layer": "origins:origin"
+                    }
+                ]
+            },
+            "origins": [
+                "size:1.5",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "unova:0570_zorua",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "hisui:0570_zorua",
+                        "layer": "origins:origin"
+                    }
+                ]
+            },
+            "origins": [
+                "size:1.0",
+                "size:2.0"
+            ]
+        },
+        {
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:origin",
+                        "origin": "unova:0571_zoroark",
+                        "layer": "origins:origin"
+                    },
+                    {
+                        "type": "origins:origin",
+                        "origin": "hisui:0571_zoroark",
+                        "layer": "origins:origin"
+                    }
+                ]
+            },
+            "origins": [
+                "size:2.0"
+            ]
+        }
+    ],
+    "allow_random": false
+}

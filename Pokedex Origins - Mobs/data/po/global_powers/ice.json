@@ -1,0 +1,10 @@
+{
+    "entity_types": [
+        "minecraft:snow_golem",
+        "minecraft:polar_bear",
+        "minecraft:stray"
+    ],
+    "powers": [
+        "po:types/ice"
+    ]
+}

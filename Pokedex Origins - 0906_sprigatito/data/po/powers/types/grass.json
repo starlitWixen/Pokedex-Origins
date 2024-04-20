@@ -1,0 +1,138 @@
+{
+    "name": "Grass-Type",
+    "description": "You are a Grass-type Pokémon.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Your Grass-type attacks deal 2x damage to Ground, Rock, and Water-type Pokémon, and 1/2x damage to Flying, Poison, Bug, Steel, Fire, Grass, and Dragon-type Pokémon."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from Flying, Poison, Bug, Fire, and Ice-type attacks, and 1/2x damage from Ground, Water, Grass, and Electric-type attacks."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from fire, fireballs, lava, and magma, 2x damage from freezing, and 1/2x damage from lightning."
+        }
+    ],
+    "fire_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fireball"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "hotFloor"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "inFire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lava"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "onFire"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "freeze_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "freeze"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "lighting_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "lightningBolt"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "flying"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "poison"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "bug"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "ice"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Grass type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "ground"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "water"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "grass"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "electric"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Grass type take 1/2x damage",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

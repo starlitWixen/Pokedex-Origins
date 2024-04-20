@@ -1,0 +1,33 @@
+{
+    "entity_types": [
+        "minecraft:camel",
+        "minecraft:cat",
+        "minecraft:chicken",
+        "minecraft:cow",
+        "minecraft:donkey",
+        "minecraft:fox",
+        "minecraft:horse",
+        "minecraft:mule",
+        "minecraft:ocelot",
+        "minecraft:pig",
+        "minecraft:rabbit",
+        "minecraft:sheep",
+        "minecraft:skeleton_horse",
+        "minecraft:villager",
+        "minecraft:wandering_trader",
+        "minecraft:goat",
+        "minecraft:llama",
+        "minecraft:panda",
+        "minecraft:trader_llama",
+        "minecraft:wolf",
+        "minecraft:hoglin",
+        "minecraft:magma_cube",
+        "minecraft:pillager",
+        "minecraft:ravager",
+        "minecraft:slime",
+        "minecraft:witch"
+    ],
+    "powers": [
+        "po:types/normal"
+    ]
+}

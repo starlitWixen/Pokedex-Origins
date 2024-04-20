@@ -1,0 +1,30 @@
+{
+    "name": "Large",
+	"description": "The Pokémon is 4 blocks tall.",
+	"type": "origins:action_on_callback",
+    "entity_action_gained": {
+		"type": "origins:and",
+		"actions": [
+			{
+	    		"type": "origins:execute_command",
+	    		"command": "scale set pehkui:height 2 @s"
+	    	},
+	    	{
+	    		"type": "origins:execute_command",
+	    		"command": "scale set pehkui:width 2 @s"
+	    	},
+			{
+	    		"type": "origins:execute_command",
+	    		"command": "scale set pehkui:reach 1.5 @s"
+	    	},
+			{
+	    		"type": "origins:execute_command",
+	    		"command": "scale set pehkui:motion 2 @s"
+	    	},
+			{
+				"type": "origins:execute_command",
+				"command": "scale persist set true @s"
+			}
+		]
+    }
+}

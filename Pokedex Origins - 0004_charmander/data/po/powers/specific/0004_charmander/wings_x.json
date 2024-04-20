@@ -1,0 +1,7 @@
+{
+    "name": "Mega Charizard X Wings",
+    "hidden": true,
+    "type": "origins:elytra_flight",
+    "render_elytra": true,
+    "texture_location": "po:textures/entity/0006_charizard_x.png"
+}

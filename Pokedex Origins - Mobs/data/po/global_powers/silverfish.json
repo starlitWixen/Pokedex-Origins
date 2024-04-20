@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:silverfish"
+    ],
+    "powers": [
+        "po:mobs/silverfish"
+    ]
+}

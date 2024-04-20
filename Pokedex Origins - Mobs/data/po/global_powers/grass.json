@@ -1,0 +1,9 @@
+{
+    "entity_types": [
+        "minecraft:mooshroom",
+        "minecraft:sniffer"
+    ],
+    "powers": [
+        "po:types/grass"
+    ]
+}

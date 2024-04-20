@@ -1,0 +1,14 @@
+{
+	"name": "Meowscarada",
+	"description": "With Protean active, the Pokémon is Dark-type.",
+	"powers": [
+		"po:types/dark",
+		"po:specific/0906_sprigatito/flower_trick",
+		"po:specific/0906_sprigatito/knock_off"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 2,
+	"impact": 0
+}

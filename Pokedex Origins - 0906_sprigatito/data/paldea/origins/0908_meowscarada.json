@@ -1,0 +1,20 @@
+{
+	"name": "Meowscarada",
+	"description": "This Pokémon uses the reflective fur lining its cape to camouflage the stem of its flower, creating the illusion that the flower is floating.",
+	"powers": [
+		"po:general/claws",
+		"po:general/cat-like_reflexes",
+		"po:general/needle-like_fur",
+		"po:general/pollinate",
+		"po:general/photosynthesis",
+		"po:specific/0906_sprigatito/vines",
+		"po:specific/0906_sprigatito/protean",
+		"po:diet/herbivore"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 906,
+	"impact": 0,
+	"unchoosable": true
+}

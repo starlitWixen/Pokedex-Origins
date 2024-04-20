@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:piglin_brute"
+    ],
+    "powers": [
+        "po:mobs/piglin_brute"
+    ]
+}

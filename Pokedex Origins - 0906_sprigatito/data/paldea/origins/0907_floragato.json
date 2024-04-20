@@ -1,0 +1,24 @@
+{
+	"name": "Floragato",
+	"description": "The hardness of Floragato's fur depends on the Pokémon's mood. When Floragato is prepared to battle, its fur becomes pointed and needle sharp.",
+	"powers": [
+		"po:types/grass",
+		"po:general/claws",
+		"po:general/cat-like_reflexes",
+		"po:general/needle-like_fur",
+		"po:general/pollinate",
+		"po:general/photosynthesis",
+		"po:specific/0906_sprigatito/vines",
+		"po:specific/0906_sprigatito/seed_bomb",
+		"po:specific/0906_sprigatito/bite",
+		"po:diet/herbivore",
+		"po:general/eviolite",
+		"po:evolution/0907_floragato"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 906,
+	"impact": 0,
+	"unchoosable": true
+}

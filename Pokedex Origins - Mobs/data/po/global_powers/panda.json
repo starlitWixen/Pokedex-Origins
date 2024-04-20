@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:panda"
+    ],
+    "powers": [
+        "po:mobs/panda"
+    ]
+}

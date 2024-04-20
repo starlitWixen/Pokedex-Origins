@@ -1,0 +1,10 @@
+{
+    "name": "Attack Boost",
+    "description": "The Pokémon has boosted attack.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.attack_damage",
+        "operation": "addition",
+        "value": 3
+    }
+}

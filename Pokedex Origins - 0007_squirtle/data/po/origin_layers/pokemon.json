@@ -1,0 +1,15 @@
+{
+    "name": "Pokémon",
+    "gui_title": {
+        "choose_origin": "Choose a Pokémon.",
+        "view_origin": "This is what Pokémon you are."
+    },
+    "order": 1,
+    "origins": [
+        "kanto:0007_squirtle",
+        "kanto:0008_wartortle",
+        "kanto:0009_blastoise",
+        "mega:0009_blastoise"
+    ],
+    "allow_random": true
+}

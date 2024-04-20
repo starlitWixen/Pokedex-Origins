@@ -1,0 +1,10 @@
+{
+    "entity_types": [
+        "minecraft:iron_golem",
+        "minecraft:piglin",
+        "minecraft:piglin_brute"
+    ],
+    "powers": [
+        "po:types/steel"
+    ]
+}

@@ -1,0 +1,157 @@
+{
+    "name": "Mega Evolution",
+    "description": "Using its respective Mega Stone, the Pokémon can temporarily change into its Mega Evolved form.",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 6000,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+			"bar_index": 5,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "*:*_resource",
+                "comparison": "<",
+                "compare_to": 6000
+            }
+        },
+        "min_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s po:pokemon kanto:0006_charizard"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "tellraw @s {\"text\":\"You revert to your original form.\",\"color\":\"yellow\"}"
+                },
+                {
+                    "type": "origins:revoke_power",
+                    "power": "*:mega/timer",
+                    "source": "*:*"
+                }
+            ]
+        }
+    },
+    "charge": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_resource",
+            "change": 1
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:mega/timer",
+            "inverted": true
+        }
+    },
+    "grant": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "pokedex_items:charizardite_x"
+                    }
+                }
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "origin set @s po:pokemon mega:0006_charizard_x"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "tellraw @s {\"text\":\"You have transformed into your Mega Evolved form.\",\"color\":\"yellow\"}"
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.player.levelup"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle minecraft:totem_of_undying ~ ~ ~ 0.25 0.25 0.25 1 1000 normal @s"
+                    },
+                    {
+                        "type": "origins:grant_power",
+                        "power": "*:mega/timer",
+                        "source": "*:*"
+                    }
+                ]
+            },
+            "else_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "origin set @s po:pokemon mega:0006_charizard_y"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "tellraw @s {\"text\":\"You have transformed into your Mega Evolved form.\",\"color\":\"yellow\"}"
+                    },
+                    {
+                        "type": "origins:play_sound",
+                        "sound": "minecraft:entity.player.levelup"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "particle minecraft:totem_of_undying ~ ~ ~ 0.25 0.25 0.25 1 1000 normal @s"
+                    },
+                    {
+                        "type": "origins:grant_power",
+                        "power": "*:mega/timer",
+                        "source": "*:*"
+                    }
+                ]
+            }
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "comparison": "==",
+                    "compare_to": 6000
+                },
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "pokedex_items:charizardite_x"
+                                }
+                            },
+                            {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "item": "pokedex_items:charizardite_y"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "key": {
+            "key": "key.use"
+        }
+    }
+}

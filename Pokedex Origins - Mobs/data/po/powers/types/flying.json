@@ -1,0 +1,89 @@
+{
+    "name": "Flying-Type",
+    "description": "You are a Flying-type Pokémon.",
+    "type": "origins:multiple",
+    "lightning_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "lightningBolt"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "freeze_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "freeze"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "rock"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "electric"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "ice"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Flying type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fighting"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "bug"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "grass"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Ghost type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "zero": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "ground"
+                }
+            ]
+        }
+    }
+}

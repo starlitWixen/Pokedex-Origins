@@ -1,0 +1,773 @@
+{
+    "name": "Iron Golem",
+    "hidden": true,
+    "type": "origins:modify_damage_dealt",
+    "bientity_action": {
+        "type": "origins:if_else_list",
+        "actions": [
+            {
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:actor_condition",
+                            "condition": {
+                                "type": "origins:command",
+                                "command": "difficulty",
+                                "comparison": "==",
+                                "compare_to": 1
+                            }
+                        },
+                        {
+                            "type": "origins:target_condition",
+                            "condition": {
+                                "type": "origins:entity_type",
+                                "entity_type": "minecraft:player"
+                            }
+                        }
+                    ]
+                },
+                "action": {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 4.75,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 5.75,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 6.75,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 7.75,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 8.75,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 9.75,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 10.75,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 11.75,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:actor_condition",
+                            "condition": {
+                                "type": "origins:command",
+                                "command": "difficulty",
+                                "comparison": "==",
+                                "compare_to": 2
+                            }
+                        },
+                        {
+                            "type": "origins:target_condition",
+                            "condition": {
+                                "type": "origins:entity_type",
+                                "entity_type": "minecraft:player"
+                            }
+                        }
+                    ]
+                },
+                "action": {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 7.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 8.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 9.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 10.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 11.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 12.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 13.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 14.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 15.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 16.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 17.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 18.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 19.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 20.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 21.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:actor_condition",
+                            "condition": {
+                                "type": "origins:command",
+                                "command": "difficulty",
+                                "comparison": "==",
+                                "compare_to": 3
+                            }
+                        },
+                        {
+                            "type": "origins:target_condition",
+                            "condition": {
+                                "type": "origins:entity_type",
+                                "entity_type": "minecraft:player"
+                            }
+                        }
+                    ]
+                },
+                "action": {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 11.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 12.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 13.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 14.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 15.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 16.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 17.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 18.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 19.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 20.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 21.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 22.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 23.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 24.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 25.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 26.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 27.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 28.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 29.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 30.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 31.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 32.25,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:entity_type",
+                        "entity_type": "minecraft:player",
+                        "inverted": true
+                    }
+                },
+                "action": {
+                    "type": "origins:choice",
+                    "actions": [
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 7.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 8.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 9.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 10.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 11.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 12.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 13.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 14.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 15.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 16.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 17.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 18.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 19.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 20.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        },
+                        {
+                            "element": {
+                                "type": "origins:target_action",
+                                "action": {
+                                    "type": "origins:damage",
+                                    "amount": 21.5,
+                                    "damage_type": "minecraft:steel"
+                                }
+                            },
+                            "weight": 1
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -1
+    }
+}

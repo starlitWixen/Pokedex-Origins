@@ -1,0 +1,9 @@
+{
+    "entity_types": [
+        "minecraft:piglin_brute",
+        "minecraft:vindicator"
+    ],
+    "powers": [
+        "po:types/fighting"
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "name": "Mega Timer",
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:change_resource",
+                "resource": "*:mega/0003_venusaur_resource",
+                "change": -1
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:mega/0006_charizard_resource",
+                "change": -1
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:mega/0009_blastoise_resource",
+                "change": -1
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:mega/0359_absol_resource",
+                "change": -1
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:mega/0448_lucario_resource",
+                "change": -1
+            },
+            {
+                "type": "origins:change_resource",
+                "resource": "*:mega/0150_mewtwo_resource",
+                "change": -1
+            }
+        ]
+    }
+}

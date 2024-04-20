@@ -1,0 +1,144 @@
+{
+    "name": "Fire-Type",
+    "description": "You are a Fire-type Pokémon.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Your Fire-type attacks deal 2x damage to Bug, Steel, Grass, and Ice-type Pokémon, and 1/2x damage to Rock, FIre, Water, and Dragon-type Pokémon."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from Ground, Rock, and Water-type attacks, and 1/2x damage from Bug, Steel, Fire, Grass, Ice, and Fairy-type attacks."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You are immune to the burn effect. You take 1/2x damage from fire, fireballs, lava, and magma, and 1/2x damage from freezing."
+        }
+    ],
+    "burn_immunity": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:revoke_power",
+                    "power": "*:general/burn",
+                    "source": "*:general/burn"
+                },
+                {
+                    "type": "origins:extinguish"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:general/burn"
+        }
+    },
+    "fire_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fireball"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "inFire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lava"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "onFire"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "freeze_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "minecraft:freeze"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "ground"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "rock"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "water"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Fire type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "bug"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "steel"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "grass"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "ice"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fairy"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Fire type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

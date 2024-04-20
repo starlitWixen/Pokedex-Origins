@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:axolotl"
+    ],
+    "powers": [
+        "po:mobs/axolotl"
+    ]
+}

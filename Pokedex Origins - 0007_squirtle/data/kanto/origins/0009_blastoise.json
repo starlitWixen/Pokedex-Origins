@@ -1,0 +1,20 @@
+{
+	"name": "Blastoise",
+	"description": "The jets of water it spouts from the rocket cannons on its shell can punch through thick steel.",
+	"powers": [
+		"po:types/water",
+		"po:general/water_breathing",
+		"po:general/swimming",
+		"po:general/rain_dish",
+		"po:specific/0007_squirtle/hydro_pump",
+		"po:diet/omnivore",
+		"po:mega/process_blastoisinite",
+		"po:mega/0009_blastoise"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 3,
+	"impact": 0,
+	"unchoosable": true
+}

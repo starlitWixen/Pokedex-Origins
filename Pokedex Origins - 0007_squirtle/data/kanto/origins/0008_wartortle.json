@@ -1,0 +1,21 @@
+{
+	"name": "Wartortle",
+	"description": "It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old.",
+	"powers": [
+		"po:types/water",
+		"po:general/water_breathing",
+		"po:general/swimming",
+		"po:general/rain_dish",
+		"po:specific/0007_squirtle/water_pulse",
+		"po:diet/omnivore",
+		"po:mega/process_blastoisinite",
+		"po:general/eviolite",
+		"po:evolution/0008_wartortle"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 3,
+	"impact": 0,
+	"unchoosable": true
+}

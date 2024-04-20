@@ -1,0 +1,11 @@
+{
+    "entity_types": [
+        "minecraft:camel",
+        "minecraft:sniffer",
+        "minecraft:husk",
+        "minecraft:silverfish"
+    ],
+    "powers": [
+        "po:types/ground"
+    ]
+}

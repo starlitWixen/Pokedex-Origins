@@ -1,0 +1,83 @@
+{
+    "name": "Fighting-Type",
+    "description": "You are a Fighting-type Pokémon.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Your Fighting-type attacks deal 2x damage to Normal, Rock, Steel, Ice, and Dark-type Pokémon, 1/2x damage to Flying, Poison, Bug, Psychic, and Fairy-type Pokémon, and no damage to Ghost-type Pokémon."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from Flying, Psychic, and Fairy-type attacks, and 1/2x damage from Rock, Bug, and Dark-type attacks."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 1/2x damage from the Wither effect."
+        }
+    ],
+    "wither_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "wither"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "flying"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "psychic"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fairy"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Fighting type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "rock"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "bug"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "dark"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Fighting type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

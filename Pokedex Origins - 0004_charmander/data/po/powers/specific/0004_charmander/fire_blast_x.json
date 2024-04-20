@@ -1,0 +1,344 @@
+{
+    "name": "Fire Blast",
+    "description": "The target is attacked with an intense blast of all-consuming fire. This may also leave the target with a burn.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:keybind",
+            "sprite": "origins:textures/gui/badge/active.png",
+            "text": "Active ability. Use %s for long-range, sneak and right-click an entity with an empty hand for short-range."
+        },
+        {
+            "type": "origins:keybind",
+            "sprite": "origins:textures/gui/badge/toggle.png",
+            "text": "Toggle between Fire Blast and Dragon Claw using your \"Load Hotbar Activator\" key."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Fire Blast and Dragon Claw operate on an alternating toggle; when Fire Blast is active and able to be used, Dragon Claw is dormant, and vice versa. Pay attention to what icon appears on your HUD to know which attack you have prepared."
+        }
+    ],
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 300,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 15,
+            "condition": {
+                "type": "origins:power_active",
+                "power": "*:*_toggle"
+            }
+        }
+    },
+    "charge": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_resource",
+            "change": 1
+        }
+    },
+    "short": {
+        "type": "origins:action_on_entity_use",
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:set_on_fire",
+                                "duration": 1
+                            },
+                            {
+                                "type": "origins:chance",
+                                "action": {
+                                    "type": "origins:grant_power",
+                                    "power": "*:general/burn",
+                                    "source": "*:general/burn"
+                                },
+                                "chance": 0.3
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "origins:damage",
+                    "amount": 9,
+                    "damage_type": "minecraft:fire"
+                },
+                {
+					"type": "origins:actor_action",
+					"action": {
+						"type": "origins:and",
+						"actions": [
+							{
+								"type": "origins:change_resource",
+								"resource": "*:*_resource",
+								"operation": "set",
+								"change": 0
+							},
+							{
+								"type": "origins:raycast",
+								"shape_type": "visual",
+								"fluid_handling": "none",
+								"distance": 15,
+								"command_step": 0.25,
+								"command_along_ray": "function po:fire_big_blue"
+							},
+							{
+								"type": "origins:play_sound",
+								"sound": "minecraft:entity.ghast.shoot",
+								"volume": 1
+							}
+						]
+					}
+				}
+            ]
+        },
+        "item_condition": {
+            "type": "origins:empty"
+        },
+        "hands": [
+            "main_hand"
+        ],
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "comparison": "==",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                }
+            ]
+        }
+    },
+    "long": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.primary_active"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:raycast",
+                        "shape_type": "collider",
+                        "fluid_handling": "any",
+                        "bientity_action": {
+                            "type": "origins:and",
+                            "actions": [
+                                {
+                                    "type": "origins:target_action",
+                                    "action": {
+                                        "type": "origins:area_of_effect",
+                                        "radius": 2.1,
+                                        "shape": "cube",
+                                        "bientity_action": {
+                                            "type": "origins:if_else",
+                                            "condition": {
+                                                "type": "origins:actor_condition",
+                                                "condition": {
+                                                    "type": "origins:exposed_to_sun"
+                                                }
+                                            },
+                                            "if_action": {
+                                                "type": "origins:and",
+                                                "actions": [
+                                                    {
+                                                        "type": "origins:target_action",
+                                                        "action": {
+                                                            "type": "origins:and",
+                                                            "actions": [
+                                                                {
+                                                                    "type": "origins:set_on_fire",
+                                                                    "duration": 1
+                                                                },
+                                                                {
+                                                                    "type": "origins:chance",
+                                                                    "action": {
+                                                                        "type": "origins:grant_power",
+                                                                        "power": "*:general/burn",
+                                                                        "source": "*:general/burn"
+                                                                    },
+                                                                    "chance": 0.3
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "origins:damage",
+                                                        "amount": 16,
+                                                        "damage_type": "minecraft:fire"
+                                                    }
+                                                ]
+                                            },
+                                            "else_action": {
+                                                "type": "origins:and",
+                                                "actions": [
+                                                    {
+                                                        "type": "origins:target_action",
+                                                        "action": {
+                                                            "type": "origins:and",
+                                                            "actions": [
+                                                                {
+                                                                    "type": "origins:set_on_fire",
+                                                                    "duration": 1
+                                                                },
+                                                                {
+                                                                    "type": "origins:chance",
+                                                                    "action": {
+                                                                        "type": "origins:grant_power",
+                                                                        "power": "*:general/burn",
+                                                                        "source": "*:general/burn"
+                                                                    },
+                                                                    "chance": 0.3
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    {
+                                                        "type": "origins:damage",
+                                                        "amount": 14,
+                                                        "damage_type": "minecraft:fire"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "include_actor": true
+                                    }
+                                },
+                                {
+                                    "type": "origins:actor_action",
+                                    "action": {
+                                        "type": "origins:change_resource",
+                                        "resource": "*:*_resource",
+                                        "operation": "set",
+                                        "change": 0
+                                    }
+                                }
+                            ]
+                        },
+                        "distance": 35,
+                        "miss_action": {
+                            "type": "origins:change_resource",
+                            "resource": "*:*_resource",
+                            "operation": "set",
+                            "change": 0
+                        },
+                        "command_step": 0.25,
+                        "command_along_ray": "function po:fire_big_blue"
+                    },
+                    "ticks": 1
+                },
+				{
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.ghast.shoot",
+                    "volume": 1
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "comparison": "==",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                }
+            ]
+        }
+    },
+    "long_armor_stand": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.primary_active"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:raycast",
+                    "distance": 35,
+                    "block": true,
+                    "entity": true,
+                    "shape_type": "collider",
+                    "fluid_handling": "any",
+                    "command_at_hit": "summon minecraft:armor_stand ~ ~ ~ {Invisible:1b, NoAI:1b, Tags:[\"tokill\"]}"
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "comparison": "==",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                }
+            ]
+        }
+    },
+    "long_armor_stand_obliterator": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.primary_active"
+        },
+        "entity_action": {
+            "type": "origins:delay",
+            "ticks": 2,
+            "action": {
+                "type": "origins:execute_command",
+                "command": "kill @e[type=minecraft:armor_stand,tag=tokill]"
+            }
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "*:*_resource",
+                    "comparison": "==",
+                    "compare_to": 300
+                },
+                {
+                    "type": "origins:power_active",
+                    "power": "*:*_toggle"
+                }
+            ]
+        }
+    },
+    "toggle": {
+        "type": "origins:toggle",
+        "key": {
+            "key": "key.loadToolbarActivator"
+        }
+    }
+}

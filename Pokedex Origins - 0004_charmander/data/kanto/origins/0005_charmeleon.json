@@ -1,0 +1,23 @@
+{
+	"name": "Charmeleon",
+	"description": "In the rocky mountains where Charmeleon live, their fiery tails shine at night like stars.",
+	"powers": [
+		"po:types/fire",
+		"po:general/ignite",
+		"po:general/claws",
+		"po:general/solar_power",
+		"po:specific/0004_charmander/firelight",
+		"po:specific/0004_charmander/flamethrower",
+		"po:general/water_vulnerability",
+		"po:diet/carnivore",
+		"po:mega/process_charizardite",
+		"po:general/eviolite",
+		"po:evolution/0005_charmeleon"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 2,
+	"impact": 0,
+	"unchoosable": true
+}

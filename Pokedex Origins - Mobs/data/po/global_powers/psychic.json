@@ -1,0 +1,13 @@
+{
+    "entity_types": [
+        "minecraft:enderman",
+        "minecraft:elder_guardian",
+        "minecraft:endermite",
+        "minecraft:evoker",
+        "minecraft:guardian",
+        "minecraft:shulker"
+    ],
+    "powers": [
+        "po:types/psychic"
+    ]
+}

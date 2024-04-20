@@ -1,0 +1,130 @@
+{
+    "name": "Water-Type",
+    "description": "You are a Water-type Pokémon.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Your Water-type attacks deal 2x damage to Ground, Rock, and Fire-type Pokémon, and 1/2x damage to Water, Grass, and Dragon-type Pokémon."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from Grass and Electric-type attacks, and 1/2x damage from Steel, Fire, Water, and Ice-type attacks."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from lightning, 1/2x damage from fire, fireballs, lava, and magma, and 1/2x damage from freezing. Your entity group is Aquatic."
+        }
+    ],
+    "lightning_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "lightningBolt"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "fire_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fireball"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "hotFloor"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "inFire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lava"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "onFire"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "freeze_resistance": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "minecraft:freeze"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "aquatic": {
+        "type": "origins:entity_group",
+        "group": "aquatic"
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "grass"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "electric"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Water type take 2x",
+            "operation": "multiply_total",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "steel"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "water"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "ice"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Water type take 1/2x damage",
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:husk"
+    ],
+    "powers": [
+        "po:mobs/husk"
+    ]
+}

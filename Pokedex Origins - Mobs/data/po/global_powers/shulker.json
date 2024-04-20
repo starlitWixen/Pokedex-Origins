@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:shulker"
+    ],
+    "powers": [
+        "po:mobs/shulker"
+    ]
+}

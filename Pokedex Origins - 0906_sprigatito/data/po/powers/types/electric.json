@@ -1,0 +1,91 @@
+{
+    "name": "Electric-Type",
+    "description": "You are an Electric-type Pokémon.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Your Electric-type attacks deal 2x damage to Flying and Water-type Pokémon, 1/2x damage to Grass, Electric, and Dragon-type Pokémon, and no damage to Ground-type Pokémon."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from Ground-type attacks, and 1/2x damage from Flying, Steel, and Electric-type attacks."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You are immune to the Paralysis effect, as well as damage from Lightning."
+        }
+    ],
+    "paralysis_immunity": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:revoke_power",
+                    "power": "*:general/paralysis",
+                    "source": "*:general/paralysis"
+                },
+                {
+                    "type": "origins:clear_effect",
+                    "effects": [
+                        "minecraft:mining_fatigue",
+                        "minecraft:slowness"
+                    ]
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "*:general/paralysis"
+        }
+    },
+    "lightning_immunity": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "lightningBolt"
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "ground"
+        },
+        "modifier": {
+            "name": "Electric type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "flying"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "steel"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "electric"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Electric type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "Needle-Like Fur",
+    "description": "The Pokémon has needle-like fur that damages attackers upon contact.",
+    "type": "origins:action_when_hit",
+    "bientity_action": {
+        "type": "origins:damage",
+        "amount": 2,
+        "source": {
+            "name": "thorns"
+        }
+    }
+}

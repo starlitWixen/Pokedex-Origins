@@ -1,0 +1,15 @@
+{
+    "name": "Pokémon",
+    "gui_title": {
+        "choose_origin": "Choose a Pokémon.",
+        "view_origin": "This is what Pokémon you are."
+    },
+    "order": 1,
+    "origins": [
+        "kanto:0001_bulbasaur",
+        "kanto:0002_ivysaur",
+        "kanto:0003_venusaur",
+        "mega:0003_venusaur"
+    ],
+    "allow_random": true
+}

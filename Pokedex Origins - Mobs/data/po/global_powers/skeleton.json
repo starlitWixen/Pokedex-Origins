@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:skeleton"
+    ],
+    "powers": [
+        "po:mobs/skeleton"
+    ]
+}

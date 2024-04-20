@@ -1,0 +1,95 @@
+{
+    "name": "Ghost-Type",
+    "description": "You are a Ghost-type Pokémon.",
+    "type": "origins:multiple",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Your Ghost-type attacks deal 2x damage to Ghost and Psychic-type Pokémon, 1/2x damage to Dark-type Pokémon, and no damage to Normal-type Pokémon."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from Ghost and Dark-type attacks, 1/2x damage from Poison and Bug-type attacks, and no damage from Normal and Fighting-type attacks."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You take 2x damage from the Wither effect. Your entity group is Undead."
+        }
+    ],
+    "undead": {
+        "type": "origins:entity_group",
+        "group": "undead"
+    },
+    "wither_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "wither"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "ghost"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "dark"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Ghost type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "poison"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "bug"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Ghost type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "zero": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "normal"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fighting"
+                }
+            ]
+        }
+    }
+}

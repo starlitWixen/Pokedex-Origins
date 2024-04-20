@@ -1,0 +1,12 @@
+{
+    "name": "Protean",
+    "description": "Changes the Pokémon's type to the type of the move it's about to use.",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "origin gui @s po:protean_meowscarada"
+    },
+    "key": {
+        "key": "key.saveToolbarActivator"
+    }
+}

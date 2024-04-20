@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:creeper"
+    ],
+    "powers": [
+        "po:types/electric"
+    ]
+}

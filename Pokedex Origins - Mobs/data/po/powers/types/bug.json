@@ -1,0 +1,91 @@
+{
+    "name": "Bug-Type",
+    "description": "You are a Bug-type Pokémon.",
+    "type": "origins:multiple",
+    "arthropod": {
+        "type": "origins:entity_group",
+        "group": "arthropod"
+    },
+    "fire_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fireball"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "hotFloor"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "inFire"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "lava"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "onFire"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "flying"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "rock"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "fire"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Bug type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "fighting"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "ground"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "grass"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Bug type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    }
+}

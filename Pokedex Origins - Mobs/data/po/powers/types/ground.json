@@ -1,0 +1,87 @@
+{
+    "name": "Ground-Type",
+    "description": "You are a Ground-type Pokémon.",
+    "type": "origins:multiple",
+    "freeze_weakness": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "freeze"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "paralysis_immunity": {
+        "type": "origins:effect_immunity",
+        "effect": "minecraft:slowness"
+    },
+    "lightning_immunity": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "lightningBolt"
+        }
+    },
+    "2x": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "water"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "grass"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "ice"
+                },
+                {
+                    "type": "origins:attacker",
+                    "entity_condition": {
+                        "type": "origins:in_tag",
+                        "tag": "powers:water"
+                    }
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Ground type take 2x",
+            "operation": "multiply_base",
+            "value": 1
+        }
+    },
+    "half": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:name",
+                    "name": "poison"
+                },
+                {
+                    "type": "origins:name",
+                    "name": "rock"
+                }
+            ]
+        },
+        "modifier": {
+            "name": "Ground type take 1/2x",
+            "operation": "multiply_base",
+            "value": -0.5
+        }
+    },
+    "zero": {
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "electric"
+        }
+    }
+}

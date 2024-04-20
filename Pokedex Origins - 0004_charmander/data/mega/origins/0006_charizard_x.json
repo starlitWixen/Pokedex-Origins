@@ -1,0 +1,27 @@
+{
+	"name": "Mega Charizard X",
+	"description": "The overwhelming power that fills its entire body causes it to turn black and create intense blue flames.",
+	"powers": [
+		"po:types/fire",
+		"po:types/dragon",
+		"po:general/flight",
+		"po:general/attack_boost_2",
+		"po:general/defense_boost_1",
+		"po:general/ignite",
+		"po:general/tough_claws",
+		"po:general/solar_power",
+		"po:specific/0004_charmander/firelight",
+		"po:specific/0004_charmander/fire_blast_x",
+		"po:specific/0004_charmander/dragon_claw",
+		"po:general/water_vulnerability",
+		"po:specific/0004_charmander/wings_x",
+		"po:diet/carnivore",
+		"po:mega/0006_charizard"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 2,
+	"impact": 0,
+	"unchoosable": true
+}

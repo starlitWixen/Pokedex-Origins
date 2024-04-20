@@ -1,0 +1,8 @@
+{
+    "entity_types": [
+        "minecraft:polar_bear"
+    ],
+    "powers": [
+        "po:mobs/polar_bear"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Axolotl",
+    "hidden": true,
+    "type": "origins:modify_damage_dealt",
+    "bientity_action": {
+        "type": "origins:target_action",
+        "action": {
+            "type": "origins:damage",
+            "amount": 2,
+            "damage_type": "minecraft:water"
+        }
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -1
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "entity_types": [
+        "minecraft:allay",
+        "minecraft:bat",
+        "minecraft:chicken",
+        "minecraft:parrot",
+        "minecraft:bee",
+        "minecraft:blaze",
+        "minecraft:ghast",
+        "minecraft:phantom",
+        "minecraft:ender_dragon"
+    ],
+    "powers": [
+        "po:types/flying"
+    ]
+}

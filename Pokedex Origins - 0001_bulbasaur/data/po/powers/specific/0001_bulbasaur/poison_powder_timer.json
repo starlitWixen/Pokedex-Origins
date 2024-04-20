@@ -1,0 +1,11 @@
+{
+    "name": "Poison Powder Timer",
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:change_resource",
+        "resource": "*:specific/0001_bulbasaur/poison_powder_resource",
+        "change": -1
+    }
+}

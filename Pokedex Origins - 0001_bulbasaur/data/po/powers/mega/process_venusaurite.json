@@ -1,0 +1,37 @@
+{
+    "name": "Process Venusaurite",
+    "description": "You are able to turn Unprocessed Meganite into Venusaurite.",
+    "type": "origins:active_self",
+    "key": {
+        "key": "key.use"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:equipped_item_action",
+                "equipment_slot": "mainhand",
+                "action": {
+                    "type": "origins:consume",
+                    "amount": 1
+                }
+            },
+            {
+                "type": "origins:give",
+                "stack": {
+                    "item": "pokedex_items:venusaurite"
+                }
+            }
+        ]
+    },
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "item": "pokedex_items:unprocessed_meganite"
+            }
+        }
+    }
+}

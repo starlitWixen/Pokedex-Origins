@@ -1,0 +1,22 @@
+{
+	"name": "Venusaur",
+	"description": "After a rainy day, the flower on its back smells stronger. The scent attracts other Pokémon.",
+	"powers": [
+		"po:types/grass",
+		"po:types/poison",
+		"po:general/pollinate",
+		"po:general/photosynthesis",
+		"po:specific/0001_bulbasaur/vines",
+		"po:specific/0001_bulbasaur/solar_beam",
+		"po:specific/0001_bulbasaur/poison_powder_3",
+		"po:diet/herbivore",
+		"po:mega/process_venusaurite",
+		"po:mega/0003_venusaur"
+	],
+	"icon": {
+		"item": "origins:orb_of_origin"
+	},
+	"order": 1,
+	"impact": 0,
+	"unchoosable": true
+}

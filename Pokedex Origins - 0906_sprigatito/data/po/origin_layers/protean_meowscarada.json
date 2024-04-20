@@ -1,0 +1,25 @@
+{
+    "name": "Protean Type",
+    "gui_title": {
+        "choose_origin": "Choose a type using Protean.",
+        "view_origin": "This is what type you are using Protean."
+    },
+    "order": 1,
+    "origins": [
+        {
+            "condition": {
+                "type": "origins:origin",
+                "origin": "paldea:0908_meowscarada",
+                "layer": "po:pokemon"
+            },
+            "origins": [
+                "paldea:0908_meowscarada_default",
+                "paldea:0908_meowscarada_grass",
+                "paldea:0908_meowscarada_dark",
+                "paldea:0908_meowscarada_bug",
+                "paldea:0908_meowscarada_fairy"
+            ]
+        }
+    ],
+    "allow_random": true
+}
